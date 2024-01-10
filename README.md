@@ -63,7 +63,6 @@ curl -X GET "https://api.nansess.com/search/artwork?q=example_song_title"
 - **404 Not Found**: No artwork found for the given song title.
 - **500 Internal Server Error**: Server error.
 
-Certainly! Here's an example documentation snippet for the Spotify track search API endpoint:
 
 # Spotify Track Search API
 
@@ -114,7 +113,6 @@ curl -X GET "https://api.nansess.com/search/spotify/track?q=example_song_title"
 - **404 Not Found**: No tracks found for the given song title.
 - **500 Internal Server Error**: Server error.
 
-Certainly! Here's an example documentation snippet for the "nan" and "deezer" track search APIs:
 
 # nan Track Search API
 
@@ -213,8 +211,6 @@ curl -X GET "https://api.nansess.com/search/deezer/track?q=sad"
 - **400 Bad Request**: Missing or invalid parameters.
 - **404 Not Found**: No tracks found for the given song title.
 - **500 Internal Server Error**: Server error.
-
-Certainly! Here's an example documentation snippet for the endpoint that searches for a Spotify song by its track ID:
 
 # Spotify Track Search by ID API
 
