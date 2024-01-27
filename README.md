@@ -135,7 +135,7 @@ GET https://api.nansess.com/search/deezer/track
 ### Example
 
 ```bash
-curl -X GET "https://api.nansess.com/search/deezer/track?q=sad"
+curl -X GET "https://api.nansess.com/search/deezer/track/sad"
 ```
 
 ### Response
