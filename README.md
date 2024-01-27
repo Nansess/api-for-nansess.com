@@ -85,7 +85,7 @@ GET https://api.nansess.com/search/spotify/track
 ### Example
 
 ```bash
-curl -X GET "https://api.nansess.com/search/spotify/track?q=example_song_title"
+curl -X GET "https://api.nansess.com/search/spotify/track/example_title"
 ```
 
 ### Response
