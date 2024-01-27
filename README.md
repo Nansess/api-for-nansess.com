@@ -114,55 +114,6 @@ curl -X GET "https://api.nansess.com/search/spotify/track?q=example_song_title"
 - **500 Internal Server Error**: Server error.
 
 
-# nan Track Search API
-
-## Overview
-
-The nan Track Search API provides a unique solution for searching and accessing MP3 files without relying on major platforms. It offers an alternative approach to discovering and obtaining audio tracks.
-
-## Endpoint
-
-```
-GET https://api.nansess.com/search/nan/track
-```
-
-## Usage
-
-### Parameters
-
-- **q** (required): The title of the song to search for in the nan database.
-
-### Example
-
-```bash
-curl -X GET "https://api.nansess.com/search/nan/track?q=example_song_title"
-```
-
-### Response
-
-```json
-{
-  "status": "success",
-  "data": [
-    {
-      "name": "Example Song Title",
-      "artist": "Example Artist",
-      "url": "https://api.nansess.com/nan/example_track.mp3"
-    },
-    // Additional tracks...
-  ]
-}
-```
-
-## Status Codes
-
-- **200 OK**: Successful request.
-- **400 Bad Request**: Missing or invalid parameters.
-- **404 Not Found**: No tracks found for the given song title.
-- **500 Internal Server Error**: Server error.
-
----
-
 # Deezer Track Search API
 
 ## Overview
