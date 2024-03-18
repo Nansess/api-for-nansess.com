@@ -14,21 +14,21 @@ The Music Artwork Search API allows users to retrieve artwork related to songs b
 
 - **Example Usage:**
   ```
-  https://api.nansess.com/search/spotify/recommendations?q=4h7qcXBtaOJnmrapxoWxGf&limit=20
+  https://api.nansess.com/search/spotify/recommendations?q=track_id&limit=20
   ```
 
 ### Track Endpoint
 
 - **Example Usage:**
   ```
-  https://api.nansess.com/search/spotify/track?q=4h7qcXBtaOJnmrapxoWxGf
+  https://api.nansess.com/search/spotify/track?q=trackID
   ```
 
 ### Playlist Endpoint
 
 - **Example Usage:**
   ```
-  https://api.nansess.com/search/spotify/playlist?q=1G8IpkZKobrIlXcVPoSIuf&page=2
+  https://api.nansess.com/search/spotify/playlist?q=playlistID&page=2
   ```
 
 ### Search Endpoint
