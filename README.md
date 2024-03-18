@@ -28,7 +28,7 @@ The Music Artwork Search API allows users to retrieve artwork related to songs b
 
 - **Example Usage:**
   ```
-  https://api.nansess.com/search/spotify/playlist?q=playlistID&page=2
+  https://api.nansess.com/search/spotify/playlist?q=playlistID&page=1
   ```
 
 ### Search Endpoint
