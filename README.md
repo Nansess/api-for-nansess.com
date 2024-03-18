@@ -3,108 +3,40 @@
 ## Overview
 
 The Music Artwork Search API allows users to retrieve artwork related to songs by providing the song title as a query. It simplifies the process of obtaining visually appealing representations associated with various music tracks.
+### Search Artwork
 
-## Endpoint
+- **Example Usage:**
+  ```
+  https://api.nansess.com/search/artwork?q=artwork_title
+  ```
 
-```
-GET https://api.nansess.com/search/artwork
-```
+### Recommendations Endpoint
 
-## Usage
+- **Example Usage:**
+  ```
+  https://api.nansess.com/search/spotify/recommendations?q=4h7qcXBtaOJnmrapxoWxGf&limit=20
+  ```
 
-### Parameters
+### Track Endpoint
 
-- **q** (required): The title of the song to search for artwork.
+- **Example Usage:**
+  ```
+  https://api.nansess.com/search/spotify/track?q=4h7qcXBtaOJnmrapxoWxGf
+  ```
 
-### Example
+### Playlist Endpoint
 
-```bash
-curl -X GET "https://api.nansess.com/search/artwork?q=example_song_title"
-```
+- **Example Usage:**
+  ```
+  https://api.nansess.com/search/spotify/playlist?q=1G8IpkZKobrIlXcVPoSIuf&page=2
+  ```
 
-### Response
+### Search Endpoint
 
-```json
-{
-  "status": "success",
-  "data": [
-    {
-      "name": "Let Me Have You",
-      "artist": "Costa Azul Quartet, Jazz Harmony Guitar Connection",
-      "image": "https://api.nansess.com/kcZDVsoYY",
-      "album": "We Fight To Live"
-    },
-    {
-      "name": "Slidin' (feat. Kodak Black)",
-      "artist": "Jason Derulo, Kodak Black",
-      "image": "https://api.nansess.com/7nrU89aXVp",
-      "album": "Slidin' (feat. Kodak Black)"
-    },
-    {
-      "name": "Let Me Live My Life",
-      "artist": "Saint Asonia",
-      "image": "https://api.nansess.com/H3444xeGt_",
-      "album": "Saint Asonia"
-    },
-    {
-      "name": "Have You Met Miss Jones? - Live",
-      "artist": "Chet Baker",
-      "image": "https://api.nansess.com/p7eLlnNOKT",
-      "album": "Live in London"
-    }
-  ]
-}
-```
-
-## Status Codes
-
-- **200 OK**: Successful request.
-- **400 Bad Request**: Missing or invalid parameters.
-- **404 Not Found**: No artwork found for the given song title.
-- **500 Internal Server Error**: Server error.
-
-
-# Spotify Track Search API
-
-## Overview
-
-The Spotify Track Search API enables users to search for tracks on Spotify by providing the song title as a query. It allows for seamless integration with Spotify to retrieve information about specific songs.
-
-## Endpoint
-
-```
-GET https://api.nansess.com/search/spotify/track
-```
-
-## Usage
-
-### Parameters
-
-- **q** (required): The title of the song to search on Spotify.
-
-### Example
-
-```bash
-curl -X GET "https://api.nansess.com/search/spotify/track/example_title"
-```
-
-### Response
-
-```json
-{
-  "status": "success",
-  "data": [
-    {
-      "name": "Example Song Title",
-      "artist": "Example Artist",
-      "album": "Example Album",
-      "preview_url": "https://api.nansess.com/example_preview",
-      "spotify_url": "https://open.spotify.com/track/example_track_id"
-    },
-    // Additional tracks...
-  ]
-}
-```
+- **Example Usage:**
+  ```
+  https://api.nansess.com/search/spotify/search?q=song_title
+  ```
 
 ## Status Codes
 
