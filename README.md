@@ -1,4 +1,4 @@
-# Music Artwork Search API
+# Music Artwork Search API (private)
 
 ## Overview
 
