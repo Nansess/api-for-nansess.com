@@ -49,7 +49,10 @@ Endpoints for YouTube and Pandora are planned for future implementation.
 - **Parameters:**
   - `q`: Song title
   - `limit` (optional): Limit the number of search results (default: 5)
-- **Example Usage:** `https://api.nansess.com/search/spotify/search?q=song_title`
+- **Example Usage:** 
+  - [`https://api.nansess.com/search/spotify/search?q=song_title`](https://api.nansess.com/search/spotify/search?q=song_title)
+  - Please note that you can also look up songs by ISRC (International Standard Recording Code) using the format `q=isrc:YOUR_ISRC_CODE`.
+    - [`https://api.nansess.com/search/spotify/search?q=isrc:USA2P2413259`](https://api.nansess.com/search/spotify/search?q=isrc:USA2P2413259)
 
 #### 5. User Playlist Endpoint
 - **URL:** `/spotify/user`
