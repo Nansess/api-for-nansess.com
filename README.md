@@ -12,6 +12,9 @@ All endpoints are relative to the base URL: `https://api.nansess.com/search/`
 ## Rate Limits
 The only rate limits you may face are imposed by Cloudflare. This could occur if your project is large-scale. If you are encountering rate limiting by Cloudflare and would like to avoid it, please join our Discord server at [discord.gg/nanbot](https://discord.gg/nanbot) and open a ticket. We'll work it out together. Thank you.
 
+### Future Endpoints
+Endpoints for YouTube and Pandora are planned for future implementation.
+
 ## Endpoints
 
 ### Spotify Endpoints
@@ -103,4 +106,4 @@ The only rate limits you may face are imposed by Cloudflare. This could occur if
   - `limit` (optional): Limit the number of search results (default: 5)
 - **Example Usage:** `https://api.nansess.com/search/apple/search?q=query`
 
-Support for playlists and albums coming soon for Apple Music
+## Finished Support for playlists and albums coming soon for Apple Music
