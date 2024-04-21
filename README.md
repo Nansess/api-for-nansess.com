@@ -1,7 +1,7 @@
 # NaN (Nocturnal Access Network)
 
 ## Introduction
-Welcome to the documentation for NaN (Nocturnal Access Network) This API provides endpoints to access data from Spotify and Tidal, Apple Music, without rate limits and unlimited requests
+Welcome to the documentation for NaN (Nocturnal Access Network). This API provides endpoints to access data from Spotify, Tidal, and Apple Music, without rate limits and unlimited requests.
 
 ## Base URL
 All endpoints are relative to the base URL: `https://api.nansess.com/search/`
@@ -82,3 +82,22 @@ All endpoints are relative to the base URL: `https://api.nansess.com/search/`
 - **Parameters:**
   - `q`: Song title
 - **Example Usage:** `https://api.nansess.com/search/tidal/search?q=song_title`
+
+### Apple Music Endpoints
+
+#### 1. Track Endpoint
+- **URL:** `/apple/track`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Track ID
+- **Example Usage:** `https://api.nansess.com/search/apple/track?q=track_id`
+
+#### 2. Search Endpoint
+- **URL:** `/apple/search`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Query
+  - `limit` (optional): Limit the number of search results (default: 5)
+- **Example Usage:** `https://api.nansess.com/search/apple/search?q=query`
+
+Support for playlists and albums coming soon for Apple Music
