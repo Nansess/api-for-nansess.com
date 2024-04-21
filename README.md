@@ -1,143 +1,84 @@
-# Music Search API (private)
+# NaN (Nocturnal Access Network)
 
-## Overview
+## Introduction
+Welcome to the documentation for NaN (Nocturnal Access Network) This API provides endpoints to access data from Spotify and Tidal, Apple Music, without rate limits and unlimited requests
 
-The Music Artwork Search API allows users to retrieve artwork related to songs by providing the song title as a query. It simplifies the process of obtaining visually appealing representations associated with various music tracks.
-### Search Artwork
+## Base URL
+All endpoints are relative to the base URL: `https://api.nansess.com/search/`
 
-- **Example Usage:**
-  ```
-  https://api.nansess.com/search/artwork?q=artwork_title
-  ```
+## Authentication
+[Describe if authentication is required and how to obtain API keys or tokens.]
 
-### Recommendations Endpoint
+## Endpoints
 
-- **Example Usage:**
-  ```
-  https://api.nansess.com/search/spotify/recommendations?q=track_id&limit=20
-  ```
+### Spotify Endpoints
 
-### Track Endpoint
+#### 1. Recommendations Endpoint
+- **URL:** `/spotify/recommendations`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Track ID
+  - `limit`: Number of recommendations to return (default: 20)
+- **Example Usage:** `https://api.nansess.com/search/spotify/recommendations?q=track_id&limit=20`
 
-- **Example Usage:**
-  ```
-  https://api.nansess.com/search/spotify/track?q=trackID
-  ```
+#### 2. Track Endpoint
+- **URL:** `/spotify/track`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Track ID
+- **Example Usage:** `https://api.nansess.com/search/spotify/track?q=track_id`
 
-### Playlist Endpoint
+#### 3. Playlist Endpoint
+- **URL:** `/spotify/playlist`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Playlist ID
+  - `page`: Page number (default: 1)
+  - `limit`: Number of playlists per page (default: 100)
+- **Example Usage:** `https://api.nansess.com/search/spotify/playlist?q=playlist_id&page=2&limit=100`
 
-- **Example Usage:**
-  ```
-  https://api.nansess.com/search/spotify/playlist?q=playlistID&page=1
-  ```
+#### 4. Search Endpoint
+- **URL:** `/spotify/search`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Song title
+- **Example Usage:** `https://api.nansess.com/search/spotify/search?q=song_title`
 
-### Search Endpoint
+#### 5. User Playlist Endpoint
+- **URL:** `/spotify/user`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: User ID
+- **Example Usage:** `https://api.nansess.com/search/spotify/user?q=user_id`
 
-- **Example Usage:**
-  ```
-  https://api.nansess.com/search/spotify/search?q=song_title
-  ```
+### Tidal Endpoints
 
-## Status Codes
+#### 1. Playlist Endpoint
+- **URL:** `/tidal/playlist`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Playlist ID
+  - `page`: Page number
+- **Example Usage:** `https://api.nansess.com/search/tidal/playlist?q=playlist_id&page=number`
 
-- **200 OK**: Successful request.
-- **400 Bad Request**: Missing or invalid parameters.
-- **404 Not Found**: No tracks found for the given song title.
-- **500 Internal Server Error**: Server error.
+#### 2. Track Endpoint
+- **URL:** `/tidal/track`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Track ID
+- **Example Usage:** `https://api.nansess.com/search/tidal/track?q=track_id`
 
+#### 3. Album Endpoint
+- **URL:** `/tidal/album`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Album ID
+  - `limit`: Number of albums to return (default: 50)
+- **Example Usage:** `https://api.nansess.com/search/tidal/album?q=album_id&limit=number`
 
-# Deezer Track Search API
-
-## Overview
-
-The Deezer Track Search API allows users to search for tracks on Deezer by providing the song title as a query. It provides an interface to integrate with Deezer's vast music catalog.
-
-## Endpoint
-
-```
-GET https://api.nansess.com/search/deezer/track
-```
-
-## Usage
-
-### Parameters
-
-- **q** (required): The title of the song to search for on Deezer.
-
-### Example
-
-```bash
-curl -X GET "https://api.nansess.com/search/deezer/track/sad"
-```
-
-### Response
-
-```json
-{
-  "status": "success",
-  "data": [
-    {
-      "name": "Sad Song",
-      "artist": "Example Deezer Artist",
-      "album": "Example Deezer Album",
-      "preview_url": "https://api.nansess.com/deezer/example_preview",
-      "deezer_url": "https://www.deezer.com/track/example_track_id"
-    },
-    // Additional tracks...
-  ]
-}
-```
-
-## Status Codes
-
-- **200 OK**: Successful request.
-- **400 Bad Request**: Missing or invalid parameters.
-- **404 Not Found**: No tracks found for the given song title.
-- **500 Internal Server Error**: Server error.
-
-# Spotify Track Search by ID API
-
-## Overview
-
-The Spotify Track Search by ID API allows users to retrieve information about a specific track on Spotify using its unique track ID. This endpoint facilitates direct access to details such as the song name, artist, album, and additional metadata.
-
-## Endpoint
-
-```
-GET https://api.nansess.com/search/uri/trackid/{spotify_track_id}
-```
-
-## Usage
-
-### Path Parameters
-
-- **spotify_track_id** (required): The unique identifier for the Spotify track.
-
-### Example
-
-```bash
-curl -X GET "https://api.nansess.com/search/uri/trackid/spotify:track:5R8dQOPq8haW94K7mgERlO"
-```
-
-### Response
-
-```json
-{
-  "status": "success",
-  "data": {
-    "name": "Example Song Title",
-    "artist": "Example Artist",
-    "album": "Example Album",
-    "preview_url": "https://api.nansess.com/example_preview",
-    "spotify_url": "https://open.spotify.com/track/5R8dQOPq8haW94K7mgERlO"
-  }
-}
-```
-
-## Status Codes
-
-- **200 OK**: Successful request.
-- **400 Bad Request**: Invalid or missing track ID.
-- **404 Not Found**: No track found for the given Spotify track ID.
-- **500 Internal Server Error**: Server error.
-
+#### 4. Search Endpoint
+- **URL:** `/tidal/search`
+- **Method:** `GET`
+- **Parameters:**
+  - `q`: Song title
+- **Example Usage:** `https://api.nansess.com/search/tidal/search?q=song_title`
