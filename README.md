@@ -9,6 +9,9 @@ All endpoints are relative to the base URL: `https://api.nansess.com/search/`
 ## Authentication
 "No authentication is needed for now. If any larger projects plan to use my API, please just credit me. Authentication might occur in the future."
 
+## Rate Limits
+The only rate limits you may face are imposed by Cloudflare. This could occur if your project is large-scale. If you are encountering rate limiting by Cloudflare and would like to avoid it, please join our Discord server at [discord.gg/nanbot](https://discord.gg/nanbot) and open a ticket. We'll work it out together. Thank you.
+
 ## Endpoints
 
 ### Spotify Endpoints
