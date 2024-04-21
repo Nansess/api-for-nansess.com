@@ -7,7 +7,7 @@ Welcome to the documentation for NaN (Nocturnal Access Network) This API provide
 All endpoints are relative to the base URL: `https://api.nansess.com/search/`
 
 ## Authentication
-[Describe if authentication is required and how to obtain API keys or tokens.]
+[No Authentication is needed for Now, if any Larger Projects Plan to use my API, please just credit me Authentication might occur in the future]
 
 ## Endpoints
 
