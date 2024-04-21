@@ -48,6 +48,7 @@ Endpoints for YouTube and Pandora are planned for future implementation.
 - **Method:** `GET`
 - **Parameters:**
   - `q`: Song title
+  - `limit` (optional): Limit the number of search results (default: 5)
 - **Example Usage:** `https://api.nansess.com/search/spotify/search?q=song_title`
 
 #### 5. User Playlist Endpoint
